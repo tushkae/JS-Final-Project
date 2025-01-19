@@ -1,0 +1,668 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+AU+NSW:wght@100..400&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Yellowtail&display=swap');
+/* Custom Styles */
+
+/* Base Styles */
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+}
+.header {background-color: #818a7e;}
+
+hr{
+    margin: 50px;
+}
+/* Base Styles */
+body {
+    font-family: "Spectral", serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    z-index: 100000;
+    background-color: #818a7e;
+    padding: 20px;
+    text-align: center;
+}
+
+header img{
+    position: relative;
+    background-color: #818a7e;
+    padding: 20px 0 0 0 ;
+    text-align: center;
+    padding-top: 0;
+    height: 25%;
+    width: 25%;
+}
+
+h1 {
+    font-size: 300%;
+    font-weight: 600;
+    color: #4d524b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 150%;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px;
+}
+p {
+    margin: 10px;
+}
+h3 {
+    font-size: 150%;
+    font-weight: 600;
+}
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+}
+
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    margin: 5px;
+    text-decoration: none;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #818a7e;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #4d524b;
+    color: #fff;
+}
+
+/* Hamburger Menu Styles */
+.nav-toggle {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.nav-toggle-label {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #333;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
+/* Hide the checkbox (used for toggling the menu) */
+.nav-toggle {
+    display: none;
+}
+
+/* Show hamburger icon on smaller screens */
+.nav-toggle-label {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Style for hamburger icon lines */
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #333;
+    height: 3px; /* Thickness of lines */
+    width: 25px; /* Width of lines */
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease; /* Smooth transition for icon animation */
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Show hamburger icon on mobile */
+    .nav-toggle-label {
+        display: block;
+    }
+
+    /* Hide navigation menu by default on mobile */
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #f4f4f4;
+        width: 300px;
+        height: 100vh;
+        transform: translateX(240%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Show menu when the toggle is checked */
+    .nav-toggle:checked + .nav-toggle-label + nav {
+        transform: translateX(0);
+    }
+
+    /* Style the menu items vertically for mobile */
+    nav ul {
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 20px 0; /* Space between menu items */
+    }
+
+    /* Make links larger and centered */
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        color: #333;
+        text-decoration: none;
+        border-radius: 30px;
+        background-color: #818a7e;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /* Change background color on hover */
+    nav ul li a:hover {
+        background-color: #4d524b;
+    }
+
+    /* Animate the hamburger icon to an X when the menu is open */
+    .nav-toggle:checked + .nav-toggle-label span {
+        background: transparent;
+    }
+    .nav-toggle:checked + .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .nav-toggle:checked + .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}
+
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #818a7e;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #818a7e;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4d524b;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 30px 30px 30px 30px;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #818a7e;
+}
+
+/* Features Section */
+.features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.features article {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+            flex: 1 1 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.features img {
+    margin: 20px;
+    width: 70%;
+    height: auto;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.features img:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+/* About Us Section */
+.about-us {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-us img {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Team Section */
+.team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.team article {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.team img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.team img:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.gallery-grid figure {
+    margin: 10px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
+    text-align: center;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    margin: -10px;
+    padding: 0;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.gallery-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.gallery-grid figcaption {
+    margin-top: 10px;
+}
+
+.gallery-item{
+    border: 1px solid #A2A2A2;
+    border-radius: 25px;
+}
+
+.gallery-item h3{
+    margin: 20px;
+    margin-bottom: 0;
+}
+.gallery-item p{
+    margin: 0;
+    margin-bottom: 20px;
+}
+/* Contact Us Section */
+.contact-us {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-us form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact-us label {
+    margin: 10px 0 5px;
+}
+
+.contact-us input,
+.contact-us textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-us button {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    background-color: #818a7e;
+    padding: 20px;
+}
+
+footer img{
+    height: 25%;
+    width: 25%;
+}
+
+/* Responsive Design */
+
+/* Screens Up to 768px */
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #f4f4f4;
+        width: 300px;
+        height: 100vh;
+        -webkit-transform: translateX(134%);
+            -ms-transform: translateX(134%);
+                transform: translateX(134%);
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        transition: -webkit-transform 0.3s ease-in-out;
+        -o-transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + nav {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    nav ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 100%;
+        flex-wrap: unset;
+
+    }
+
+    nav ul li {
+        margin: 0;
+        flex-grow: 0;
+
+    }
+
+    nav ul li a{
+        width: 160px;
+        padding: 6px;
+
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+}
+/* Screens Up to 480px */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+        margin: 10px;
+    }
+
+    .nav-toggle-label {
+        top: 15px;
+        right: 15px;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        width: 20px;
+    }
+
+    .features img,
+    .team img,
+    .about-us img {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+/* Screens Up to 320px */
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+  
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+  
+#close-modal {
+    margin-top: 15px;
+}
+
+.footer-container img{
+    width: 50px;
+    height: 50px;
+}
+.copyright{
+   
+    vertical-align: middle;
+}
+.socials{
+    vertical-align: middle;
+}

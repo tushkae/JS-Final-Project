@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Animation, Anime, Studio Ghibli, Movies">
+    <meta name="description" content="If you have any questions regarding Studio Ghibli, you can contact us here. Enter your Email address so we can get get back to you. ">
+    <meta name="author" content="Studio Ghibli Team">
+    <meta property="og:title" content="Ghibli Studio - Contact Us">
+    <meta property="og:description" content="Get in touch with Studio Ghibli.">
+    <meta property="og:image" content="images/og-image.avif">
+    <meta property="og:url" content="http://www.studioghibli.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghibli Studio | Contact Us | Get In Touch </title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./script/script.js"></script>
+</head>
+<body>
+    <div id="thank-you-modal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for contacting us. We will get back in touch as soon as possible!</p>
+            <button id="close-modal">OK</button>
+        </div>
+    </div>
+  
+    <header>
+        <a href="index.html"> 
+            <img src="./images/logo2.png" alt="Studio-Ghibli-Logo">
+        </a>
+    </header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+    </label>
+    <nav class="header">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Collections</a></li>
+            <li><a href="contact.html"class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-us">
+        <h1>Get in Touch</h1>
+        <p>If you have any questions or need assistance, please fill out the form below, and we'll get back to you shortly.</p>
+        <form action="#" method="post" id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <img src="./images/banner.png" alt="Studio Ghibli Footer Banner">
+        <div class="footer-container">
+            <div class="socials">
+                <a href="">
+                    <img src="Images/facebook-messenger.png" alt="Facebook messenger logo">
+                </a>
+                <a href="">
+                    <img src="Images/Vector.png" alt="instagram logo">
+                </a>
+                <a href="">
+                    <img src="Images/youtube.png" alt="youtube logo">
+                </a>
+            </div>
+            <p class="copyright">&copy; 2023 Ghibli Studio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
