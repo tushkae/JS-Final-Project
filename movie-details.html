@@ -5,28 +5,20 @@
         <meta name="keywords" content="Animation, Anime, Movies, TV shows, TV series">
         <meta name="description" content="explore the world of cinema.">
         <meta name="author" content="Elisabed Tushishvili">
-        <meta property="og:title" content="Movie Night - Contact Us">
+        <meta property="og:title" content="Movie Night - Movie Details">
         <meta property="og:description" content="explore the world of cinema.">
         <meta property="og:image" content="images/og-image.avif">
         <meta property="og:url" content="https://www.themoviedb.org/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Movie Night | Contact Us | Welcome to Movie Night</title>
+        <title>Movie Night | Movie Details | Welcome to Movie Night</title>
         <link rel="icon" type="image/png" href="images/movie-icon.png"/>
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-        <script src="./script/contact.js"></script>
+        <script src="./script/movie-details.js"></script>
         <script src="./script/dark-mode.js"></script>
-        <script src="./script/script.js"></script>
     </head>
 <body>
-    <div id="thank-you-modal" class="modal">
-        <div class="modal-content">
-            <p>Thank you for contacting us. We will get back in touch as soon as possible!</p>
-            <button id="close-modal">OK</button>
-        </div>
-    </div>
-  
     <header>
         <div class="dark-mode-switch-container">
             <p>Light</p>
@@ -49,29 +41,12 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="movies.html">Movies</a></li>
-            <li><a href="contact.html"class="active">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-
-    <section>
-        <div class="contact-us">
-            <h1>Get in Touch</h1>
-            <p>If you have any questions or need assistance, please fill out the form below, and we'll get back to you shortly.</p>
-            <form action="#" method="post" id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit" class="btn">Submit</button>
-            </form>
-        </div>
+    <section class="home">
+        <div class="movie-details-container"></div>
     </section>
-
     <footer>
         <div class="footer-container">
             <div class="socials">
